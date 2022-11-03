@@ -1,0 +1,427 @@
+!-- Created by Hajar Ashraf --> 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee shope front end developement</title>
+    <!--style file link-->
+    <link rel="stylesheet" href="./aswss/style.css">
+    <!--font awesome and material icon link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--aos cdn css links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--swiper cdn css link-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!--jquery cdn links-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--jquery code-->
+    <script>
+        $(document).ready(function(){
+            $('.fa-bars').click(function(){
+                $(this).toggleClass('fa-times');
+                $('nav').toggleClass('nav-toggle');
+            });
+            $('nav ul li a').click(function(){
+                $('.fa-bars').removeClass('fa-times');
+                $('nav').removeClass('nav-toggle');
+            });
+
+                $('section').each(function(){
+
+                    let top = $(window).scrollTop();
+                    let height = $(this).height();
+                    let id = $(this).attr('id');
+                    let offset = $(this).offset().top - 200;
+
+                    if(top > offset && top < offset + height){
+                        $('nav ul li a').removeClass('active');
+                        $('nav').find([href="#${id}"]).addClass('active');
+                    }
+
+                });
+        });
+    </script>
+</head>
+<body>
+    <!--header section starts-->
+    <header class="header">
+        <i class="fa fa-bars"></i>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="active"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-globe"></i>About</a></li>
+                <li><a href="#menu"><span class="material-icons">coffee</span>Menu</a></li>
+                <li><a href="#review"><i class="fa fa-star"></i>Review</a></li>
+                <li><a href="#book"><i class="fa fa-fw fa-envelope"></i>Book</a></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i>Sign out</a></li>
+            </ul>
+        </nav>
+        <a href="#book" class="btn">book a table</a>
+    </header>
+    <!--header section ends-->
+
+    <!--home section starts-->
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content" data-aos="zoom-out">
+                <h3>Royal taste</h3>
+                <h2>fresh coffee in the morming</h2>
+                <a href="#" class="btn">buy one now</a>
+            </div>
+            <div class="image">
+                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="" class="main-home-image">
+            </div>
+        </div>
+        <div class="image-slider">
+            <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+            <img src="https://d.radikal.ru/d34/1905/c2/46cc21ce5fc6.png" alt="">
+            <img src="https://i.postimg.cc/dVY8NNNR/logo.png" alt="">
+           
+        </div>
+    </section>
+    <!--home section ends-->
+
+    <!--about section starts-->
+    <section class="about" id="about">
+        <h1 class="heading">About us <span>why choose us</span> </h1>
+        <div class="row">
+            <div class="image" data-aos="fade-right">
+                <img src="https://cdn.coffeecircle.com/7163ee41-bd03-45d0-923a-0c17da0a2bc4/-/resize/1600x/-/quality/lighter/1506_Kaffeeklatsch_84.jpg" alt="">
+            </div>
+            <div class="content" data-aos="fade-left">
+                <h3 class="title">what's make our coffee special!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Impedit omnis eos nihil placeat voluptatem eum mollitia 
+                     asperiores molestias facere, sint quaerat temporibus beatae 
+                     fugit esse voluptas ipsam hic ut a!
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit,
+                     asperiores molestias facere, sint quaerat temporibus beatae.
+                </p>
+                <a href="#" class="btn">read more</a>
+                <div class="icons-container">
+                    <div class="icons">
+                        <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                        <h3>quality coffee</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="https://d.radikal.ru/d34/1905/c2/46cc21ce5fc6.png" alt="">
+                        <h3>our branches</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="https://i.postimg.cc/dVY8NNNR/logo.png" alt="">
+                        <h3>free delivery</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--about section ends-->
+
+    <!--menu section starts-->
+    <section class="menu" id="menu">
+        <h1 class="heading">Our Menu <span>popular menu</span></h1>
+        <div class="box-container">
+            <a href="#" class="box" data-aos="fade-up">
+                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                <div class="content">
+                    <h3>our  special coffee</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolore necessitatibus ea sequi qui minima.</p>
+                    <span>8.99$</span>
+                </div>
+            </a>
+            <a href="#" class="box" data-aos="fade-up">
+                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                <div class="content">
+                    <h3>our  special coffee</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolore necessitatibus ea sequi qui minima.</p>
+                    <span>8.99$</span>
+                </div>
+            </a>
+            <a href="#" class="box" data-aos="fade-up">
+                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                <div class="content">
+                    <h3>our  special coffee</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolore necessitatibus ea sequi qui minima.</p>
+                    <span>8.99$</span>
+                </div>
+            </a>
+            <a href="#" class="box" data-aos="fade-up">
+                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                <div class="content">
+                    <h3>our  special coffee</h3>
+                    <section class="about" id="about">
+                        <h1 class="heading">About us <span>why choose us</span> </h1>
+                        <div class="row">
+                            <div class="image" data-aos="fade-right">
+                                <img src="https://cdn.coffeecircle.com/7163ee41-bd03-45d0-923a-0c17da0a2bc4/-/resize/1600x/-/quality/lighter/1506_Kaffeeklatsch_84.jpg" alt="">
+                            </div>
+                            <div class="content" data-aos="fade-left">
+                                <h3 class="title">what's make our coffee special!</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                     Impedit omnis eos nihil placeat voluptatem eum mollitia 
+                                     asperiores molestias facere, sint quaerat temporibus beatae 
+                                     fugit esse voluptas ipsam hic ut a!
+                                     Lorem ipsum dolor sit amet consectetur adipisicing elit,
+                                     asperiores molestias facere, sint quaerat temporibus beatae.
+                                </p>
+                                <a href="#" class="btn">read more</a>
+                                <div class="icons-container">
+                                    <div class="icons">
+                                        <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                                        <h3>quality coffee</h3>
+                                    </div>
+                                    <div class="icons">
+                                        <img src="https://d.radikal.ru/d34/1905/c2/46cc21ce5fc6.png" alt="">
+                                        <h3>our branches</h3>
+                                    </div>
+                                    <div class="icons">
+                                        <img src="https://i.postimg.cc/dVY8NNNR/logo.png" alt="">
+                                        <h3>free delivery</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--about section ends-->
+                
+                    <!--menu section starts-->
+                    <section class="menu" id="menu">
+                        <h1 class="heading">Our Menu <span>popular menu</span></h1>
+                        <div class="box-container">
+                            <a href="#" class="box" data-aos="fade-up">
+                                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                                <div class="content">
+                                    <h3>our  special coffee</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolore necessitatibus ea sequi qui minima.</p>
+                                    <span>8.99$</span>
+                                </div>
+                            </a>
+                            <a href="#" class="box" data-aos="fade-up">
+                                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                                <div class="content">
+                                    <h3>our  special coffee</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolore necessitatibus ea sequi qui minima.</p>
+                                    <span>8.99$</span>
+                                </div>
+                            </a>
+                            <a href="#" class="box" data-aos="fade-up">
+                                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                                <div class="content">
+                                    <h3>our  special coffee</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolore necessitatibus ea sequi qui minima.</p>
+                                    <span>8.99$</span>
+                                </div>
+                            </a>
+                            <a href="#" class="box" data-aos="fade-up">
+                                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                                <div class="content">
+                                    <h3>our  special coffee</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolore necessitatibus ea sequi qui minima.</p>
+                    <span>8.99$</span>
+                </div>
+            </a>
+            <a href="#" class="box" data-aos="fade-up">
+                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                <div class="content">
+                    <h3>our  special coffee</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolore necessitatibus ea sequi qui minima.</p>
+                    <span>8.99$</span>
+                </div>
+            </a>
+            <a href="#" class="box" data-aos="fade-up">
+                <img src="https://dl.dropbox.com/s/gxy1eqilxxpzyrp/%E2%80%94pngtree%E2%80%94flying%20cup%20of%20coffee%20with_5057949.png?dl=0" alt="">
+                <div class="content">
+                    <h3>our  special coffee</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero dolore necessitatibus ea sequi qui minima.</p>
+                    <span>8.99$</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!--menu section ends-->
+    <!--review section starts-->
+    <section class="review" id="review">
+        <h1 class="heading">Reviews <span>what people says </span></h1>
+        <div class="swiper review-slider" data-aos="zoom-out">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box" data-aos="zoom-out">
+                    <i class="fa fa-quote-left"></i>
+                    <i class="fa fa-quote-right"></i>
+                    <img src="https://cdn.coffeecircle.com/7163ee41-bd03-45d0-923a-0c17da0a2bc4/-/resize/1600x/-/quality/lighter/1506_Kaffeeklatsch_84.jpg" alt="">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h3>Zain</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, veniam! Officia illum ipsam optio voluptatibus excepturi harum quos ab quibusdam.</p>
+                    <span>satisfied client</span>
+                </div>
+                <div class="swiper-slide box" data-aos="zoom-out"> 
+                    <i class="fa fa-quote-left"></i>
+                    <i class="fa fa-quote-right"></i>
+                    <img src="https://images.pexels.com/photos/876401/pexels-photo-876401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h3>maria</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, veniam! Officia illum ipsam optio voluptatibus excepturi harum quos ab quibusdam.</p>
+                    <span>satisfied client</span>
+                </div>
+                <div class="swiper-slide box" data-aos="zoom-out">
+                    <i class="fa fa-quote-left"></i>
+                    <i class="fa fa-quote-right"></i>
+                    <img src="https://images.pexels.com/photos/7125540/pexels-photo-7125540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h3>jousef</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, veniam! Officia illum ipsam optio voluptatibus excepturi harum quos ab quibusdam.</p>
+                    <span>satisfied client</span>
+                </div>
+                <div class="swiper-slide box" data-aos="zoom-out">
+                    <i class="fa fa-quote-left"></i>
+                    <i class="fa fa-quote-right"></i>
+                    <img src="https://images.pexels.com/photos/1090393/pexels-photo-1090393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <h3>Aisha</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, veniam! Officia illum ipsam optio voluptatibus excepturi harum quos ab quibusdam.</p>
+                    <span>satisfied client</span>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!--review section ends-->
+    
+    <!--book section starts-->
+    <section class="book" id="book">
+        <h1 class="heading">Booking <span>reserve a table</span></h1>
+        <form action="" data-aos="zoom-out-up">
+            <input type="text" placeholder="your name" class="box">
+            <input type="email" placeholder="your email" class="box">
+            <input type="number" placeholder="your phone" class="box">
+            <textarea name="" id="" placeholder="your message" cols="30" rows="10" class="box"></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form>
+    </section>
+    <!--book section ends-->
+
+    <!--footer section starts-->
+    <footer class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Quik links</h3>
+                <a href="#home"><i class="fa fa-arrow-right"></i><i class="fa fa-fw fa-home"></i>Home</a>
+                <a href="#about"><i class="fa fa-arrow-right"></i><i class="fa fa-globe"></i>About</a>
+                <a href="#menu"><i class="fa fa-arrow-right"></i><span class="material-icons">coffee</span>Menu</a>
+                <a href="#review"><i class="fa fa-arrow-right"></i><i class="fa fa-star"></i>Review</a>
+                <a href="#book"><i class="fa fa-arrow-right"></i><i class="fa fa-fw fa-envelope"></i> Book</a>
+                <a href="#"><i class="fa fa-arrow-right"></i><i class="fa fa-sign-out"></i>Sign out</a>
+            </div>
+            <div class="box">
+                <h3>our branches</h3>
+                <a href="#"><i class="fa fa-arrow-right"></i>Egypt</a>
+                <a href="#"><i class="fa fa-arrow-right"></i>France</a>
+                <a href="#"><i class="fa fa-arrow-right"></i>Turkey</a>
+                <a href="#"><i class="fa fa-arrow-right"></i>USA</a>
+                <a href="#"><i class="fa fa-arrow-right"></i>japan</a>
+            </div>
+            <div class="box">
+                <h3>social</h3>
+                <a href="#"><i class="fa fa-arrow-right"></i><i class="fa fa-facebook"></i>Facebook</a>
+                <a href="#"><i class="fa fa-arrow-right"></i><i class="fa fa-twitter"></i>Twitter</a>
+                <a href="#"><i class="fa fa-arrow-right"></i><i class="fa fa-instagram"></i>Instagram</a>
+                <a href="#"><i class="fa fa-arrow-right"></i><i class="fa fa-youtube-play"></i>Youtube</a>
+                <a href="#"><i class="fa fa-arrow-right"></i><i class="fa fa-linkedin"></i>linkedin</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fa fa-arrow-right"></i><i class="fa fa-mobile">+20101234567</i></a>
+                <a href="#"><i class="fa fa-arrow-right"></i><i class="fa fa-phone">+050234567</i></a>
+                <a href="#"><i class="fa fa-arrow-right"></i><i class="fa fa-envelope"> example@yahoo.com</i></a>
+            </div>
+        </div>
+        <div class="credit">copyrights@ 2022 developed by <span>Hajar Ashraf , frontend developer</span> | all rights reserved </div>
+    </footer>
+    <!--footer section ends-->
+
+
+
+
+
+
+
+
+    <!--swiper cdn scripting link-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--java script file link-->
+    <script src="js/script.js"></script>
+
+
+    <!--aos cdn scripting link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--initiation of AOS-->
+    <script>
+        AOS.init({
+            delay:400,
+            duration:1000
+        })
+    </script>
+    <script>
+        document.querySelectorAll('.image-slider img').forEach(images=>{
+    images.onclick=()=>{
+        var src=images.getAttribute('src');
+        document.querySelector('.main-home-image').src=src;
+    };
+});
+
+var swiper=new Swiper(".review-slider",
+{
+    spaceBetween:20,
+    pagination:{
+        el:".swiper-pagination",clickable:true,
+    },
+    loop:true,
+    grabCursor:true,
+    autoplay:{
+        delay:7500,
+        disableOnInteraction:false,
+    },
+    breakpoints:{
+        0:{
+            slidesPerview:1,
+        },
+        768:{
+            slidesPerview:2,
+        },
+    },
+});
+    </script>
+</body>
+</html>
